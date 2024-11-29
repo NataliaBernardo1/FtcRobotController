@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.OpMode;
+/*package org.firstinspires.ftc.teamcode.OpMode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -62,3 +62,4 @@ public class TestWiring extends LinearOpMode {
         }
     }
 }
+*/

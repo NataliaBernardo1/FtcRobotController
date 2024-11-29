@@ -1,4 +1,4 @@
-package UtilityClasses;
+package org.firstinspires.ftc.teamcode.UtilityClasses;
 
 import com.qualcomm.robotcore.hardware.Gamepad;
 
@@ -100,7 +100,7 @@ public class Controller {
 
     public double leftTrigger = 0, rightTrigger = 0;
     // x is left to right, y is down to up
-    public Vector2D leftStick = new Vector2D(0, 0), rightStick = new Vector2D(0, 0);
+    //public Vector2D leftStick = new Vector2D(0, 0), rightStick = new Vector2D(0, 0);
 
     public Controller(Gamepad g) {
         gamepad = g;
@@ -228,12 +228,12 @@ public class Controller {
         rumblingStopped = !held && previous;
         rumblingFunctions.run(held, previous);
 
-        leftStick.x = gamepad.left_stick_x;
+        /*leftStick.x = gamepad.left_stick_x;
         leftStick.y = -gamepad.left_stick_y; // the gamepad.y is negative if the stick is up
         //leftStick.convertToAngleMagnitude();
-        rightStick.x = gamepad.right_stick_x;
+        rightStick. = gamepad.right_stick_x;
         rightStick.y = -gamepad.right_stick_y; // the gamepad.y is negative if the stick is up
-        //rightStick.convertToAngleMagnitude();
+        //rightStick.convertToAngleMagnitude();*/
     }
     // the controllers have two rumble motors in them; one in the left, one in the right
     public void rumble(double left, double right, int duration) {
@@ -280,7 +280,7 @@ public class Controller {
         return !rumbling;
     }
     // gets a location that can be directly passed to TeleOpDrive's move function to simplify code
-    public Location getMovement() {
+    /*public Location getMovement() {
         return new Location(-leftStick.y, -leftStick.x, -rightStick.x);
-    }
+    }*/
 }

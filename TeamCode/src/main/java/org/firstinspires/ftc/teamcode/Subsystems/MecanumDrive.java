@@ -64,22 +64,22 @@ public class MecanumDrive {
     public void setMode(DcMotor.RunMode runWithoutEncoder) {
     }
 
-    public Subsystems.AutoTransferPose.Trajectory trajectoryBuilder(Pose2d pose2d) {
+    /*public Subsystems.AutoTransferPose.Trajectory trajectoryBuilder(Pose2d pose2d) {
         return null;
-    }
+    }*/
 
-    public void setPoseEstimate(Subsystems.AutoTransferPose.Pose2d startPose) {
-    }
+    /*public void setPoseEstimate(Subsystems.AutoTransferPose.Pose2d startPose) {
+    }*/
 
     public void followTrajectory(Trajectory traj) {
     }
 
-    public void followTrajectory(Subsystems.AutoTransferPose.Trajectory traj) {
-    }
+    /*public void followTrajectory(Subsystems.AutoTransferPose.Trajectory traj) {
+    }*/
 
-    public Subsystems.AutoTransferPose.Trajectory trajectoryBuilder(Subsystems.AutoTransferPose.Pose2d startPose) {
+   /* public Subsystems.AutoTransferPose.Trajectory trajectoryBuilder(Subsystems.AutoTransferPose.Pose2d startPose) {
         return null;
-    }
+    }*/
 
     private class Trajectory {
     }

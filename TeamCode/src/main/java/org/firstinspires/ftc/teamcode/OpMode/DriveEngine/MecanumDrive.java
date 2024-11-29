@@ -33,10 +33,10 @@ import UtilityClasses.Vector2D;
 public class MecanumDrive {
     private DcMotor[] motors = new DcMotor[4];
     private static final String[] MOTOR_NAMES = {
-            "frontLeftDriveMotor",
-            "backLeftDriveMotor",
-            "frontRightDriveMotor",
-            "backRightDriveMotor"
+            "frontLeftMotor",
+            "backLeftMotor",
+            "frontRightMotor",
+            "backRightMotor"
     };
     private DcMotorSimple.Direction[] directions = {
             DcMotorSimple.Direction.REVERSE,

@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.OpMode.TeleOp;
+/*package org.firstinspires.ftc.teamcode.OpMode.TeleOp;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -98,7 +98,7 @@ public class WobotoTele extends LinearOpMode {
             if(con2.bPressed){
                 claw.setPosition(claw.getPosition() == Claw.CLOSE_POSITION
                         ? Claw.OPEN_POSITION : Claw.CLOSE_POSITION);
-            }*/
+            }*//*
 
             if (con2.bPressed) {
                 claw.setPosition(Claw.CLOSE_POSITION);
@@ -115,3 +115,4 @@ public class WobotoTele extends LinearOpMode {
         }
     }
 }
+*/

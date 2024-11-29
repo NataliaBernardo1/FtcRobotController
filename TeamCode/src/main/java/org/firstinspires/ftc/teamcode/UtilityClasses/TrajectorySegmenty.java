@@ -1,13 +1,13 @@
-package UtilityClasses;
+/*package org.firstinspires.ftc.teamcode.UtilityClasses;
 
 //import com.acmerobotics.roadrunner.trajectory.Trajectory;
 
 import Subsystems.AutoTransferPose;
 
-public class TrajectorySegment {
+class trajectorysegment {
     public final AutoTransferPose.Trajectory trajectory;
 
-    public TrajectorySegment(AutoTransferPose.Trajectory trajectory) {
+    public trajectorysegment(AutoTransferPose.Trajectory trajectory) {
        // super(trajectory.duration(),
                 //trajectory.start(),
                 //trajectory.end(),
@@ -19,3 +19,4 @@ public class TrajectorySegment {
         return this.trajectory;
     }
 }
+*/
