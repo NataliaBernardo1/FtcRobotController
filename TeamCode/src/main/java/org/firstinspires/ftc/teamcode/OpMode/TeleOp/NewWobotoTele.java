@@ -62,10 +62,10 @@ public class NewWobotoTele extends LinearOpMode {
             );
 
             if (gamepad2.right_trigger != 0 && (lift.getPositionLeft() < 3600 ||
-                    lift.getPositionRight() < 3600)) {
+                    lift.getPositionRight() > 0)) {
                 lift.setPower(-gamepad2.right_trigger);}
             else if (gamepad2.left_trigger != 0 && (lift.getPositionLeft() > 0 ||
-                    lift.getPositionRight() > 0)){
+                    lift.getPositionRight() < 3600)){
                 lift.setPower(gamepad2.left_trigger);
                 }
 
