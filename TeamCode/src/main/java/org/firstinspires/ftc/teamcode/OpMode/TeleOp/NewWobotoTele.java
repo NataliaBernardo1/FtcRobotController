@@ -21,6 +21,8 @@ public class NewWobotoTele extends LinearOpMode {
     private Claw claw;
     private Controller controller;
 
+    boolean aAlreadyPressed = false;
+
     @Override
     public void runOpMode() throws InterruptedException {
         drive = new MecanumDrive(hardwareMap, 0);
@@ -48,7 +50,7 @@ public class NewWobotoTele extends LinearOpMode {
             con1.update();
             con2.update();
 
-            if (gamepad1.left_trigger > 0.1) {
+            if (gamepad2.a && (aAlreadyPressed = false)) {
                 drive.slowMode();
             }
 
@@ -61,13 +63,22 @@ public class NewWobotoTele extends LinearOpMode {
 
             );
 
-            if (gamepad2.right_trigger != 0 && (lift.getPositionLeft() < 3600 ||
+            if (gamepad1.right_trigger != 0 && (lift.getPositionLeft() < 3600 ||
                     lift.getPositionRight() > 0)) {
-                lift.setPower(-gamepad2.right_trigger);}
-            else if (gamepad2.left_trigger != 0 && (lift.getPositionLeft() > 0 ||
+                lift.setPower(-gamepad1.right_trigger);}
+            else if (gamepad1.left_trigger != 0 && (lift.getPositionLeft() > 0 ||
                     lift.getPositionRight() < 3600)){
-                lift.setPower(gamepad2.left_trigger);
+                lift.setPower(gamepad1.left_trigger);
                 }
+
+            if (gamepad1.x) {
+                arm.setTurrentPower(0.5);}
+            else if(gamepad1.y) {
+                arm.setTurrentPower(-0.5);}
+            else {
+                arm.setTurrentPower(0);
+            }
+           // }
 
             //Lift and arm control
             //lift.setPower(gamepad2.right_trigger - gamepad2.left_trigger);
@@ -103,9 +114,9 @@ public class NewWobotoTele extends LinearOpMode {
                 positionR = positionR == 0 ? 1 : 0;
                 servoRight.setPosition(((1 - positionR) * servoRight_MinLimit) + (positionR * servoRight_MaxLimit));
             }*/
-            if (con2.rightBumperPressed) {
+            if (con1.rightBumperPressed) {
                 arm.setPositionElbow(1);
-            } else if (con2.leftBumperPressed) {
+            } else if (con1.leftBumperPressed) {
                 arm.setPositionElbow(0);
                 arm.flipWrist();
             }
@@ -125,5 +136,8 @@ public class NewWobotoTele extends LinearOpMode {
                 gamepad2.rumble(3);
                 endGameTimer.reset();
             }
+            aAlreadyPressed = gamepad2.a;
         }
+
     }
+
